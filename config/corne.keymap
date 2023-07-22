@@ -18,21 +18,19 @@
 };
 
 / {
-        keymap {
-                compatible = "zmk,keymap";
-
-                behaviors {
-                 cm: controls_mods {
+        behaviors {
+                cm: controls_mods {
                         compatible = "zmk,behavior-hold-tap";
-                        label = "CUSTOM_HOLD";
                         #binding-cells = <2>;
                         tapping-term-ms = <200>;
                         quick-tap-ms = <0>;
                         flavor = "tap-preferred";
                         bindings = <&kp>, <&kp>;
                         retro-tap;
-                        };
                 };
+        };
+        keymap {
+                compatible = "zmk,keymap";
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
