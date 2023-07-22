@@ -12,9 +12,27 @@
 #define L_CODE 1
 #define L_FUNC 2
 
+&lt {
+    tapping-term-ms = <200>;
+    flavor = "hold-preferred";
+};
+
 / {
         keymap {
                 compatible = "zmk,keymap";
+
+                behaviors {
+                 cm: controls_mods {
+                        compatible = "zmk,behavior-hold-tap";
+                        label = "CUSTOM_HOLD";
+                        #binding-cells = <2>;
+                        tapping-term-ms = <200>;
+                        quick-tap-ms = <0>;
+                        flavor = "tap-preferred";
+                        bindings = <&kp>, <&kp>;
+                        retro-tap;
+                        };
+                }
 
                 default_layer {
 // -----------------------------------------------------------------------------------------
@@ -23,9 +41,9 @@
 // | _ |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  | _ |
 //                 | GUI | LWR | SPC |   | ENT | RSE  | ALT |
                         bindings = <
-   &none &lt TAB Q    &kp W    &kp E     &kp R     &kp T                   &kp Y            &kp U      &kp I      &kp O      &kp P     &none
-   &none &lt LCTRL A  &kp S    &kp D     &kp F     &kp G                   &kp H            &kp J      &kp K      &kp L      &kp SEMI  &none
-   &none &lt LSHFT Z  &kp X    &kp C     &kp V     &kp B                   &kp N            &kp M      &kp COMMA  &kp DOT    &kp FSLH  &none
+   &none &cm TAB Q    &kp W    &kp E     &kp R     &kp T                   &kp Y            &kp U      &kp I      &kp O      &kp P     &none
+   &none &cm LCTRL A  &kp S    &kp D     &kp F     &kp G                   &kp H            &kp J      &kp K      &kp L      &kp SEMI  &none
+   &none &cm LSHFT Z  &kp X    &kp C     &kp V     &kp B                   &kp N            &kp M      &kp COMMA  &kp DOT    &kp FSLH  &none
                                &kp LALT  &kp LGUI  &lt L_FUNC SPACE        &lt L_CODE ENTER &kp BSPC   &kp RSHFT
                         >;
                 };
