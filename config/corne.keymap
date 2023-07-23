@@ -29,13 +29,20 @@
                         bindings = <&kp>, <&kp>;
                         retro-tap;
                 };
+              td: tap_dance_two {
+                compatible = "zmk,behavior-tap-dance";
+                label = "TAP_DANCE_TWO";
+                #binding-cells = <0>;
+                tapping-term-ms = <160>;
+                bindings = <&kp>, <&kp>;
+              };
         };
         keymap {
                 compatible = "zmk,keymap";
 
                 default_layer {
                         bindings = <
-   &none &cm TAB Q    &kp W    &kp E     &kp R     &kp T                   &kp Y            &kp U      &kp I      &kp O      &kp P     &none
+   &none &td Q ESC    &kp W    &kp E     &kp R     &kp T                   &kp Y            &kp U      &kp I      &kp O      &kp P     &none
    &none &cm LCTRL A  &kp S    &kp D     &kp F     &kp G                   &kp H            &kp J      &kp K      &kp L      &kp SEMI  &none
    &none &cm LSHFT Z  &kp X    &kp C     &kp V     &kp B                   &kp N            &kp M      &kp COMMA  &kp DOT    &kp FSLH  &none
                                &kp LALT  &kp LGUI  &lt L_FUNC SPACE        &lt L_CODE ENTER &kp BSPC   &kp RSHFT
