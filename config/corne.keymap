@@ -45,7 +45,7 @@
    &none &eq          &kp W    &kp E     &kp R     &kp T                   &kp Y            &kp U      &kp I      &kp O      &kp P            &none
    &none &cm LCTRL A  &kp S    &kp D     &kp F     &kp G                   &kp H            &kp J      &kp K      &kp L      &kp SEMI         &none
    &none &cm LSHFT Z  &kp X    &kp C     &kp V     &kp B                   &kp N            &kp M      &kp COMMA  &kp DOT    &cm RSHIFT FSLH  &none
-                               &kp LALT  &kp LGUI  &lt L_FUNC SPACE        &lt L_CODE ENTER &kp BSPC   &mt L_SYSTEM
+                               &kp LALT  &kp LGUI  &lt L_FUNC SPACE        &lt L_CODE ENTER &kp BSPC   &mo L_SYSTEM
                         >;
                 };
                 code_layer {
